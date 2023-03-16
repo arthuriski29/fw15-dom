@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #logo-changeable-color {
+      /* filter: invert(76%) sepia(12%) saturate(1616%) hue-rotate(338deg) brightness(102%) contrast(102%); */
+      filter: invert(94%) sepia(4%) saturate(2165%) hue-rotate(321deg) brightness(101%) contrast(101%);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="flex justify-between items-center px-12 bg-[#AA7C52] h-24">
+      <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
+        <img id="logo-changeable-color" class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+        <span class="text-[#38291B]">We</span>
+        <span class="text-[#FFBA7B]">tick</span>
+      </div>
+      <div class="font-semibold text-sm leading-5">
+        <ul class="flex gap-12">
+          <li>Home</li>
+          <li>Create Event</li>
+          <li>Location</li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-5 font-semibold text-sm leading-5">
+        <div
+          class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+          <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
+            src="assets/profile-picture-1.jpg" alt="profile">
+        </div>
+        <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
+      </div>
+    </div>
+  </div>
+  <main class="bg-[F4F7FF] flex gap-16 my-[50px]">
+    <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
+      <div class="flex gap-[15px]">
+        <div>
+          <div
+            class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+            <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
+              src="assets/profile-picture-1.jpg" alt="profile">
+          </div>
+        </div>
+
+        <div>
+          <div>Jhon Tomson</div>
+          <div class="font-normal text-xs leading-4 text-[#666971]">Entrepreneur, ID</div>
+        </div>
+      </div>
+
+
+      <ul class="mt-14 flex flex-col gap-8">
+        <li class="flex gap-[26.5px]"><i data-feather="user"></i>Profile</li>
+        <ul class="ml-12 flex flex-col gap-8">
+          <li class="flex gap-[26.5px]" id="strikethrough"><i data-feather="credit-card"></i>Card</li>
+          <li class="flex gap-[26.5px]"><i data-feather="edit-3"></i>Edit Profile</li>
+          <li class="flex gap-[26.5px]"><i data-feather="unlock"></i>Change Password</li>
+        </ul>
+        <li class="flex gap-[26.5px]  text-[#FFBA7B]"><i data-feather="check-square"></i>My Booking</li>
+        <li class="flex gap-[26.5px]"><i data-feather="heart"></i>My Wishlist</li>
+        <li class="flex gap-[26.5px]"><i data-feather="settings"></i>Settings</li>
+        <li class="flex gap-[26.5px] text-[#F03800]"><i data-feather="log-out"></i>Logout</li>
+      </ul>
+    </aside>
+    <div class="flex my-12 flex-1 ml-[50px] mr-[50px]">
+      <div class="bg-[#F5F5F5] px-12 py-11 rounded-2xl flex-1 flex flex-col">
+        <div class="flex justify-between">
+          <div class="text-2xl font-bold gap-px tracking-wider">My Booking</div>
+          <div class="text-2xl font-bold gap-px tracking-wider">Date</div>
+        </div>
+      
+      <div class="flex flex-1 justify-center items-center">
+        <div class="w-[315px] h-[113px] flex flex-col text-center">
+          <span class="font-semibold text-2xl tracking-wider">No ticket bought</span>
+          <span class="font-normal text-[#666971] leading-8 text-sm ">It appears you haven’t bought any tickets yet. Maybe try searching these?</span>
+        </div>
+      </div>      
+      </div>
+    </div>
+  </main>
+  <footer class="flex flex-col justify-items-center mx-[218px] h-[308px]">
+
+    <div class="flex-1 flex justify-items-center">
+      <div class="flex flex-col gap-[15px] mr-[100px]">
+        <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
+          <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+          <span class="text-[#38291B]">We</span>
+          <span class="text-[#FFBA7B]">tick</span>
+        </div>
+        <div class="mt-[15px] font-medium text-base tracking-wide leading-4">Find event you love with our</div>
+        <div class="flex gap-[20px]">
+          <span>
+            <img class="w-5 h-5" src="assets/fb-grey.svg" alt="fb-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/whatsapp-grey.svg" alt="whatsapp-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/ig-grey.svg" alt="ig-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/twitter-grey.svg" alt="twitter-grey">
+          </span>
+        </div>
+      </div>
+        
+      
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Wetick</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>About Us</li>
+          <li>Features</li>
+          <li>Blog</li>
+          <li>Payments</li>
+          <li>Mobile App</li>
+        </ul>
+      </div>
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Features</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>Booking</li>
+          <li>Create Events</li>
+          <li>Discover</li>
+          <li>Register</li>
+        </ul>
+      </div>
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Company</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>Partnership</li>
+          <li>Help</li>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
+      © 2020 Wetick All Rights Reserved
+    </div>
+    </div>
+      
+    
+  </footer>
+
+
+
+
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>
