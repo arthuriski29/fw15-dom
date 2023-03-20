@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Password</title>
+  <title>Event</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  <script src="https://unpkg.com/feather-icons"></script>  
+  <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
     @layer utilities {
@@ -22,13 +21,10 @@
     
     }
   </style>
-  
-
-  <link rel="stylesheet" type="text/css" href="style.css">  
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-  <div class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24">
+  <nav class="flex md:flex-row flex-col w-full justify-between items-center px-12 bg-[#F5F5F5] h-24">
     <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
       <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
       <span class="text-[#38291B]">We</span>
@@ -42,72 +38,74 @@
       </ul>
     </div>
     <div class="flex items-center gap-5 font-semibold text-sm leading-5">
-      <div
-        class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+      <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
         <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
           alt="profile">
       </div>
       <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
     </div>
-  </div>
+  </nav>
 
-  <main class="bg-[F4F7FF] flex gap-16 my-[50px]">
-    <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
-      <div class="flex gap-[15px]">
-        <div>
-          <div
-            class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
-            <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
-              src="assets/profile-picture-1.jpg" alt="profile">
+  <main>
+    <div class="flex w-[1126px] mx-[120px] mt-[50px] mb-[100px] p-[100px] bg-[#FFE8D3] rounded-[30px]">
+      <div class="flex flex-col items-center flex-1 gap-[50px]">
+        <div class="event-banner">
+          <img src="assets/Banner1.png" alt="banner-1">
+          <div class="banner-text">
+            
           </div>
         </div>
-
-        <div>
-          <div>Jhon Tomson</div>
-          <div class="font-normal text-xs leading-4 text-[#666971]">Entrepreneur, ID</div>
+        <div class="flex">
+          <span class="flex gap-[18px]">
+            <i data-feather="heart"></i>
+            <p class="font-semibold text-xl leading-7 tracking-[1px]">Add to Wishlist</p>
+          </span>
         </div>
       </div>
+      <div class="w-[462px] flex-1">
+        <div class="flex flex-col gap-[30px] border-b-2 border-gray-800 pb-[30px]">
+          <div class="font-semibold text-2xl leading-9 flex items-center tracking-[2px]">Sights & Sounds 
+            Exhibition</div>
+          <div class="flex justify-between">
+            <div>
+              <span class="flex">
+                <i data-feather="map-pin"></i>
+                <p class="font-medium text-sm leading-7 tracking-[1px]">Jakarta, Indonesia</p>
+              </span>
+            </div>
+            <div>
+              <span class="flex">
+                <i data-feather="clock"></i>
+                <p class="font-medium text-sm leading-7 tracking-[1px]">Wed, 15 Nov, 4:00 PM</p>
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[11px]">
+            <div class="font-medium text-sm leading-7 tracking-[0.5px]">Attendes</div>
+            <div>
+              <img src="assets/avatars.png" alt="avatars">
+            </div>
+          </div>
+        </div>
+        <div class="pt-[30px]">
+          <div class="font-semibold text-2xl leading-9 flex items-center tracking-[2px] mb-[15px]">Event Detail</div>
+          <div class="font-normal text-xs leading-5 tracking-[1px] mb-[10px]">After his controversial art exhibition "Tear and Consume" back in November 2018, in which guests were invited to tear up…</div>
+          <div class="mt-[10px] mb-[25px]"><a href="#">Read more</a></div>
+          <div class="font-semibold text-2xl leading-9 flex items-center tracking-[2px] mb-[15px]">Location</div>
+          <img src="assets/map-location.png" alt="map-location">
+          <div class="mt-[50px] flex flex-col justify-center items-start">
+            <button type="submit
+        "class="w-[255px] h-[40px] bg-[#AA7C52] rounded-2xl text-center text-[#FFBA7B]">
+          Buy Tickets
+        </button>
+          </div>
 
-
-      <ul class="mt-14 flex flex-col gap-8">
-        <li class="flex gap-[26.5px]"><i data-feather="user"></i>Profile</li>
-        <ul class="ml-12 flex flex-col gap-8">
-          <li class="flex gap-[26.5px]" id="strikethrough"><i data-feather="credit-card"></i>Card</li>
-          <li class="flex gap-[26.5px]"><i data-feather="edit-3"></i><a href="edit-profile.html">Edit Profile</a></li>
-          <li class="flex gap-[26.5px] text-[#FFBA7B]"><i data-feather="unlock"></i><a href="change-password.html">Change Password</a></li>
-        </ul>
-        <li class="flex gap-[26.5px]"><i data-feather="check-square"></i><a href="my-booking.html">My Booking</a></li>
-        <li class="flex gap-[26.5px]"><i data-feather="heart"></i><a href="my-wishlist.html">My Wishlist</a></li>
-        <li class="flex gap-[26.5px]"><i data-feather="settings"></i>Settings</li>
-        <li class="flex gap-[26.5px] text-[#F03800]"><i data-feather="log-out"></i>Logout</li>
-      </ul>
-    </aside>
-    <div class="flex my-12 flex-1 ml-[50px] mr-[50px]">
-      <div class="bg-[#F5F5F5] px-12 py-11 rounded-2xl flex-1">
-        <div class="text-xl font-bold tracking-wide mb-[50px]">Change Password</div>
-      <form class="flex flex-col gap-8">
-        <div class="flex items-center gap-16">
-          <label class="w-[179.26px] h-[21px]" for="old-password">Old Password</label>
-          <input type="password" placeholder="Input Old Password ..." class="flex-1 h-14 px-7 border border-#C1C5D0">
         </div>
-        <div class="flex items-center gap-16 py-[16.5px]">
-          <label class="w-[179.26px] h-[21px]" for="new-password">New Password</label>
-          <input type="password" placeholder="Input New Password ..." class="flex-1 h-14 px-7 border border-#C1C5D0">
-        </div>
-        <div class="flex items-center gap-16">
-          <label class="w-[179.26px] h-[21px]" for="confirm-password">Confirm Password</label>
-          <input type="password" placeholder="Input Confirm Password ..." class="flex-1 h-14 px-7 border border-#C1C5D0">
-        </div>
-      </form>
-      <button type="submit
-      "class="w-full h-[61px] my-[20px] bg-[#AA7C52] rounded-2xl text-center text-[#FFBA7B]">
-        Update
-      </button>
+        
       </div>
-      
-      
     </div>
   </main>
+  
   <footer class="flex flex-col justify-items-center mx-[218px] h-[308px]">
 
     <div class="flex-1 flex justify-items-center">
@@ -133,8 +131,8 @@
           </span>
         </div>
       </div>
-        
-      
+
+
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Wetick</span>
         <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
@@ -164,20 +162,17 @@
           <li>Sitemap</li>
         </ul>
       </div>
-      
+
     </div>
     <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
       © 2020 Wetick All Rights Reserved
     </div>
     </div>
-      
-    
-  </footer>
-  
 
+
+  </footer>
   <script>
     feather.replace()
   </script>
 </body>
-
 </html>

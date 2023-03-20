@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24">
+    <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
+      <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+      <span class="text-[#38291B]">We</span>
+      <span class="text-[#FFBA7B]">tick</span>
+    </div>
+    <div class="font-semibold text-sm leading-5">
+      <ul class="flex gap-12">
+        <li>Home</li>
+        <li>Create Event</li>
+        <li>Location</li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-5 font-semibold text-sm leading-5">
+      <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+        <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
+          alt="profile">
+      </div>
+      <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
+    </div>
+  </div>
+  <main class="flex">
+    <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
+      <div class="flex gap-[15px]">
+        <div>
+          <div
+            class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+            <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
+              src="assets/profile-picture-1.jpg" alt="profile">
+          </div>
+        </div>
+
+        <div>
+          <div>Jhon Tomson</div>
+          <div class="font-normal text-xs leading-4 text-[#666971]">Entrepreneur, ID</div>
+        </div>
+      </div>
+
+
+      <ul class="mt-14 flex flex-col gap-8">
+        <li class="flex gap-[26.5px]"><i data-feather="user"></i>Profile</li>
+        <ul class="ml-12 flex flex-col gap-8">
+          <li class="flex gap-[26.5px]" id="strikethrough"><i data-feather="credit-card"></i>Card</li>
+          <li class="flex gap-[26.5px] text-[#FFBA7B]"><i data-feather="edit-3"></i><a href="edit-profile.html">Edit Profile</a></li>
+          <li class="flex gap-[26.5px]"><i data-feather="unlock"></i><a href="change-password.html">Change Password</a></li>
+        </ul>
+        <li class="flex gap-[26.5px]"><i data-feather="check-square"></i><a href="my-booking.html">My Booking</a></li>
+        <li class="flex gap-[26.5px]"><i data-feather="heart"></i><a href="my-wishlist.html">My Wishlist</a></li>
+        <li class="flex gap-[26.5px]"><i data-feather="settings"></i>Settings</li>
+        <li class="flex gap-[26.5px] text-[#F03800]"><i data-feather="log-out"></i>Logout</li>
+      </ul>
+    </aside>
+    <div id="profile-tab" class="flex w-[926px] h-[825px] my-12 mx-[70px]">
+      <div id="profile-tab-wrap" class="px-[50px] pt-[46px] rounded-[30px] bg-[#FFE8D3]">
+        <div class="mb-[50px] font-semibold text-xl leading-6">Profile</div>
+        <div class="flex font-normal text-sm leading-5">
+          <div id="profile-list" class="flex flex-col w-[468px]">
+            <form class="w-full flex flex-col gap-[50px]">
+              <div id="name" class="flex gap-8">
+                <label for="name" class="w-[130px]">Name</label>
+                <input type="text" id="name-input" placeholder="Jhon Tomson">
+              </div>
+              <div id="username" class="flex gap-8">
+                <label for="username" class="w-[130px]">Username</label>
+                <input type="text" id="username-input" placeholder="@jhont0">
+                <a href="#">Edit</a>
+              </div>
+              <div id="email" class="flex gap-8">
+                <label for="email" class="w-[130px]">Email</label>
+                <input type="email" id="email-input" placeholder="jhont0@mail.com">
+                <a href="#">Edit</a>
+              </div>
+              <div id="phone-number" class="flex gap-8">
+                <label for="phone-number" class="w-[130px]">Phone Number</label>
+                <input type="tel" id="phone-input">
+                <a href="#">Edit</a>
+              </div>
+              <div id="gender" class="flex gap-8">
+                <label for="gender" class="w-[130px]">Gender</label>
+                <input type="radio" id="gender-male" value="Male"><label for="gender-1">Male</label>
+                <input type="radio" id="gender-female" value="Female"><label for="gender-2">Female</label>
+              </div>
+              <div id="profession" class="flex gap-8">
+                <label for="profession" class="w-[130px]">Profession</label>
+                <select id="profession-select">
+                  <option value="" disabled selected>Entrepreneur</option>
+                  <option value="1">Artist</option>
+                  <option value="2">Business Analyst</option>
+                  <option value="3">Construction Worker</option>
+                  <option value="4">Designer</option>
+                  <option value="5">Entrepreneur</option>
+                  <option value="6">Freelancer</option>
+                  <option value="7">Social Worker</option>
+                </select>
+              </div>
+              <div id="nationality" class="flex gap-8">
+                <label for="nationality" class="w-[130px]">Nationality</label>
+                <select id="nationality-select">
+                  <option value="" disabled selected>Indonesia</option>
+                  <option value="afghan">Afghan</option>
+                  <option value="albanian">Albanian</option>
+                  <option value="algerian">Algerian</option>
+                  <option value="american">American</option>
+                  <option value="andorran">Andorran</option>
+                  <option value="angolan">Angolan</option>
+                  <option value="antiguans">Antiguans</option>
+                  <option value="argentinean">Argentinean</option>
+                  <option value="armenian">Armenian</option>
+                  <option value="australian">Australian</option>
+                  <option value="austrian">Austrian</option>
+                  <option value="azerbaijani">Azerbaijani</option>
+                  <option value="bahamian">Bahamian</option>
+                  <option value="bahraini">Bahraini</option>
+                  <option value="bangladeshi">Bangladeshi</option>
+                  <option value="barbadian">Barbadian</option>
+                  <option value="barbudans">Barbudans</option>
+                  <option value="batswana">Batswana</option>
+                  <option value="belarusian">Belarusian</option>
+                  <option value="belgian">Belgian</option>
+                  <option value="belizean">Belizean</option>
+                  <option value="beninese">Beninese</option>
+                  <option value="bhutanese">Bhutanese</option>
+                  <option value="bolivian">Bolivian</option>
+                  <option value="bosnian">Bosnian</option>
+                  <option value="brazilian">Brazilian</option>
+                  <option value="british">British</option>
+                  <option value="bruneian">Bruneian</option>
+                  <option value="bulgarian">Bulgarian</option>
+                  <option value="burkinabe">Burkinabe</option>
+                  <option value="burmese">Burmese</option>
+                  <option value="burundian">Burundian</option>
+                  <option value="cambodian">Cambodian</option>
+                  <option value="cameroonian">Cameroonian</option>
+                  <option value="canadian">Canadian</option>
+                  <option value="cape verdean">Cape Verdean</option>
+                  <option value="central african">Central African</option>
+                  <option value="chadian">Chadian</option>
+                  <option value="chilean">Chilean</option>
+                  <option value="chinese">Chinese</option>
+                  <option value="colombian">Colombian</option>
+                  <option value="comoran">Comoran</option>
+                  <option value="congolese">Congolese</option>
+                  <option value="costa rican">Costa Rican</option>
+                  <option value="croatian">Croatian</option>
+                  <option value="cuban">Cuban</option>
+                  <option value="cypriot">Cypriot</option>
+                  <option value="czech">Czech</option>
+                  <option value="danish">Danish</option>
+                  <option value="djibouti">Djibouti</option>
+                  <option value="dominican">Dominican</option>
+                  <option value="dutch">Dutch</option>
+                  <option value="east timorese">East Timorese</option>
+                  <option value="ecuadorean">Ecuadorean</option>
+                  <option value="egyptian">Egyptian</option>
+                  <option value="emirian">Emirian</option>
+                  <option value="equatorial guinean">Equatorial Guinean</option>
+                  <option value="eritrean">Eritrean</option>
+                  <option value="estonian">Estonian</option>
+                  <option value="ethiopian">Ethiopian</option>
+                  <option value="fijian">Fijian</option>
+                  <option value="filipino">Filipino</option>
+                  <option value="finnish">Finnish</option>
+                  <option value="french">French</option>
+                  <option value="gabonese">Gabonese</option>
+                  <option value="gambian">Gambian</option>
+                  <option value="georgian">Georgian</option>
+                  <option value="german">German</option>
+                  <option value="ghanaian">Ghanaian</option>
+                  <option value="greek">Greek</option>
+                  <option value="grenadian">Grenadian</option>
+                  <option value="guatemalan">Guatemalan</option>
+                  <option value="guinea-bissauan">Guinea-Bissauan</option>
+                  <option value="guinean">Guinean</option>
+                  <option value="guyanese">Guyanese</option>
+                  <option value="haitian">Haitian</option>
+                  <option value="herzegovinian">Herzegovinian</option>
+                  <option value="honduran">Honduran</option>
+                  <option value="hungarian">Hungarian</option>
+                  <option value="icelander">Icelander</option>
+                  <option value="indian">Indian</option>
+                  <option value="indonesian">Indonesian</option>
+                  <option value="iranian">Iranian</option>
+                  <option value="iraqi">Iraqi</option>
+                  <option value="irish">Irish</option>
+                  <option value="israeli">Israeli</option>
+                  <option value="italian">Italian</option>
+                  <option value="ivorian">Ivorian</option>
+                  <option value="jamaican">Jamaican</option>
+                  <option value="japanese">Japanese</option>
+                  <option value="jordanian">Jordanian</option>
+                  <option value="kazakhstani">Kazakhstani</option>
+                  <option value="kenyan">Kenyan</option>
+                  <option value="kittian and nevisian">Kittian and Nevisian</option>
+                  <option value="kuwaiti">Kuwaiti</option>
+                  <option value="kyrgyz">Kyrgyz</option>
+                  <option value="laotian">Laotian</option>
+                  <option value="latvian">Latvian</option>
+                  <option value="lebanese">Lebanese</option>
+                  <option value="liberian">Liberian</option>
+                  <option value="libyan">Libyan</option>
+                  <option value="liechtensteiner">Liechtensteiner</option>
+                  <option value="lithuanian">Lithuanian</option>
+                  <option value="luxembourger">Luxembourger</option>
+                  <option value="macedonian">Macedonian</option>
+                  <option value="malagasy">Malagasy</option>
+                  <option value="malawian">Malawian</option>
+                  <option value="malaysian">Malaysian</option>
+                  <option value="maldivan">Maldivan</option>
+                  <option value="malian">Malian</option>
+                  <option value="maltese">Maltese</option>
+                  <option value="marshallese">Marshallese</option>
+                  <option value="mauritanian">Mauritanian</option>
+                  <option value="mauritian">Mauritian</option>
+                  <option value="mexican">Mexican</option>
+                  <option value="micronesian">Micronesian</option>
+                  <option value="moldovan">Moldovan</option>
+                  <option value="monacan">Monacan</option>
+                  <option value="mongolian">Mongolian</option>
+                  <option value="moroccan">Moroccan</option>
+                  <option value="mosotho">Mosotho</option>
+                  <option value="motswana">Motswana</option>
+                  <option value="mozambican">Mozambican</option>
+                  <option value="namibian">Namibian</option>
+                  <option value="nauruan">Nauruan</option>
+                  <option value="nepalese">Nepalese</option>
+                  <option value="new zealander">New Zealander</option>
+                  <option value="ni-vanuatu">Ni-Vanuatu</option>
+                  <option value="nicaraguan">Nicaraguan</option>
+                  <option value="nigerien">Nigerien</option>
+                  <option value="north korean">North Korean</option>
+                  <option value="northern irish">Northern Irish</option>
+                  <option value="norwegian">Norwegian</option>
+                  <option value="omani">Omani</option>
+                  <option value="pakistani">Pakistani</option>
+                  <option value="palauan">Palauan</option>
+                  <option value="panamanian">Panamanian</option>
+                  <option value="papua new guinean">Papua New Guinean</option>
+                  <option value="paraguayan">Paraguayan</option>
+                  <option value="peruvian">Peruvian</option>
+                  <option value="polish">Polish</option>
+                  <option value="portuguese">Portuguese</option>
+                  <option value="qatari">Qatari</option>
+                  <option value="romanian">Romanian</option>
+                  <option value="russian">Russian</option>
+                  <option value="rwandan">Rwandan</option>
+                  <option value="saint lucian">Saint Lucian</option>
+                  <option value="salvadoran">Salvadoran</option>
+                  <option value="samoan">Samoan</option>
+                  <option value="san marinese">San Marinese</option>
+                  <option value="sao tomean">Sao Tomean</option>
+                  <option value="saudi">Saudi</option>
+                  <option value="scottish">Scottish</option>
+                  <option value="senegalese">Senegalese</option>
+                  <option value="serbian">Serbian</option>
+                  <option value="seychellois">Seychellois</option>
+                  <option value="sierra leonean">Sierra Leonean</option>
+                  <option value="singaporean">Singaporean</option>
+                  <option value="slovakian">Slovakian</option>
+                  <option value="slovenian">Slovenian</option>
+                  <option value="solomon islander">Solomon Islander</option>
+                  <option value="somali">Somali</option>
+                  <option value="south african">South African</option>
+                  <option value="south korean">South Korean</option>
+                  <option value="spanish">Spanish</option>
+                  <option value="sri lankan">Sri Lankan</option>
+                  <option value="sudanese">Sudanese</option>
+                  <option value="surinamer">Surinamer</option>
+                  <option value="swazi">Swazi</option>
+                  <option value="swedish">Swedish</option>
+                  <option value="swiss">Swiss</option>
+                  <option value="syrian">Syrian</option>
+                  <option value="taiwanese">Taiwanese</option>
+                  <option value="tajik">Tajik</option>
+                  <option value="tanzanian">Tanzanian</option>
+                  <option value="thai">Thai</option>
+                  <option value="togolese">Togolese</option>
+                  <option value="tongan">Tongan</option>
+                  <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                  <option value="tunisian">Tunisian</option>
+                  <option value="turkish">Turkish</option>
+                  <option value="tuvaluan">Tuvaluan</option>
+                  <option value="ugandan">Ugandan</option>
+                  <option value="ukrainian">Ukrainian</option>
+                  <option value="uruguayan">Uruguayan</option>
+                  <option value="uzbekistani">Uzbekistani</option>
+                  <option value="venezuelan">Venezuelan</option>
+                  <option value="vietnamese">Vietnamese</option>
+                  <option value="welsh">Welsh</option>
+                  <option value="yemenite">Yemenite</option>
+                  <option value="zambian">Zambian</option>
+                  <option value="zimbabwean">Zimbabwean</option>
+                </select>
+              </div>
+              <div id="birthday-date" class="flex gap-8">
+                <label for="birthday" class="w-[130px]">Birthday Date</label>
+                <input type="date" id="birthday-select">
+                <a href="#">Edit</a>
+              </div>
+            </form>
+            <button id="profile-save-button" type="submit" class="my-[50px] mt-[50px] border-none rounded-2xl px-[20px] shadow-[0px_8px_10px_#38291B] bg-yellow-700 text-orange-300 font-bold no-underline w-full h-10">Save</button>
+          </div>
+          <div id="profile-user-picture" class="flex flex-col border-l-2 pl-[50px]">
+            <div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+                  <img class="border-[3.38px] border-white object-cover w-[110px] h-[110px] rounded-full"
+                    src="assets/profile-picture-1.jpg" alt="profile">
+                </div>
+              </div>
+            </div>
+            <div>
+              <button id="profile-choose-photo-button" type="submit" class="mt-[50px] border-none rounded-2xl px-[20px] shadow-[0px_8px_10px_#38291B] bg-yellow-700 text-orange-300 font-bold no-underline w-full h-10">Choose Photo</button>
+            </div>
+            <div class="mt-[50px]">
+              <ul>
+                <li>Image size: max, 2 MB</li>
+                <li>Image formats: .JPG, .JPEG, .PNG</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="flex flex-col justify-items-center mx-[218px] h-[308px]">
+
+    <div class="flex-1 flex justify-items-center">
+      <div class="flex flex-col gap-[15px] mr-[100px]">
+        <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
+          <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+          <span class="text-[#38291B]">We</span>
+          <span class="text-[#FFBA7B]">tick</span>
+        </div>
+        <div class="mt-[15px] font-medium text-base tracking-wide leading-4">Find event you love with our</div>
+        <div class="flex gap-[20px]">
+          <span>
+            <img class="w-5 h-5" src="assets/fb-grey.svg" alt="fb-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/whatsapp-grey.svg" alt="whatsapp-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/ig-grey.svg" alt="ig-grey">
+          </span>
+          <span>
+            <img class="w-5 h-5" src="assets/twitter-grey.svg" alt="twitter-grey">
+          </span>
+        </div>
+      </div>
+
+
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Wetick</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>About Us</li>
+          <li>Features</li>
+          <li>Blog</li>
+          <li>Payments</li>
+          <li>Mobile App</li>
+        </ul>
+      </div>
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Features</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>Booking</li>
+          <li>Create Events</li>
+          <li>Discover</li>
+          <li>Register</li>
+        </ul>
+      </div>
+      <div class="flex flex-1 flex-col gap-[20px]">
+        <span class="font-semibold text-base tracking-wide">Company</span>
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+          <li>Partnership</li>
+          <li>Help</li>
+          <li>Terms of Service</li>
+          <li>Privacy Policy</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
+      © 2020 Wetick All Rights Reserved
+    </div>
+    </div>
+
+
+  </footer>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Booking</title>
+  <title>My Wishlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
@@ -17,37 +18,34 @@
       .content-auto {
         content-visibility: auto;
       }
+    
     }
   </style>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-  <div>
-    <div class="flex justify-between items-center px-12 bg-[#AA7C52] h-24">
-      <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
-        <img id="logo-changeable-color" class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
-        <span class="text-[#38291B]">We</span>
-        <span class="text-[#FFBA7B]">tick</span>
+  <div class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24">
+    <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
+      <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+      <span class="text-[#38291B]">We</span>
+      <span class="text-[#FFBA7B]">tick</span>
+    </div>
+    <div class="font-semibold text-sm leading-5">
+      <ul class="flex gap-12">
+        <li>Home</li>
+        <li>Create Event</li>
+        <li>Location</li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-5 font-semibold text-sm leading-5">
+      <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+        <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
+          alt="profile">
       </div>
-      <div class="font-semibold text-sm leading-5">
-        <ul class="flex gap-12">
-          <li>Home</li>
-          <li>Create Event</li>
-          <li>Location</li>
-        </ul>
-      </div>
-      <div class="flex items-center gap-5 font-semibold text-sm leading-5">
-        <div
-          class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
-          <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
-            src="assets/profile-picture-1.jpg" alt="profile">
-        </div>
-        <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
-      </div>
+      <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
     </div>
   </div>
-  <main class="bg-[F4F7FF] flex gap-16 my-[50px]">
+  <main class="flex">
     <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
       <div class="flex gap-[15px]">
         <div>
@@ -72,8 +70,8 @@
           <li class="flex gap-[26.5px]"><i data-feather="edit-3"></i><a href="edit-profile.html">Edit Profile</a></li>
           <li class="flex gap-[26.5px]"><i data-feather="unlock"></i><a href="change-password.html">Change Password</a></li>
         </ul>
-        <li class="flex gap-[26.5px] text-[#FFBA7B]"><i data-feather="check-square"></i><a href="my-booking.html">My Booking</a></li>
-        <li class="flex gap-[26.5px]"><i data-feather="heart"></i><a href="my-wishlist.html">My Wishlist</a></li>
+        <li class="flex gap-[26.5px]"><i data-feather="check-square"></i><a href="my-booking.html">My Booking</a></li>
+        <li class="flex gap-[26.5px] text-[#FFBA7B]"><i data-feather="heart"></i><a href="my-wishlist.html">My Wishlist</a></li>
         <li class="flex gap-[26.5px]"><i data-feather="settings"></i>Settings</li>
         <li class="flex gap-[26.5px] text-[#F03800]"><i data-feather="log-out"></i>Logout</li>
       </ul>
@@ -81,15 +79,8 @@
     <div class="flex my-12 flex-1 ml-[50px] mr-[50px]">
       <div class="bg-[#F5F5F5] px-12 py-11 rounded-2xl flex-1 flex flex-col">
         <div class="flex justify-between">
-          <div class="text-2xl font-bold gap-px tracking-wider">My Booking</div>
-          <div class="text-2xl font-bold gap-px tracking-wider">
-            <div class="w-[125px] h-[50px] bg-[#E4C5AA] rounded-[15px] flex justify-center items-center">
-              <span class="flex inline-block gap-[17px] py-[16px]">
-                <img src="assets/date-icon.png" alt="date-icon">
-                <p class="py-[3px] font-medium text-xs leading-4 tracking-[1px] ">March</p>
-              </span>
-            </div>
-          </div>
+          <div class="font-semibold text-xl leading-6">My Wishlist</div>
+          <div class="font-semibold text-xl leading-6"></div>
         </div>
       
       <div class="flex flex-1 justify-center items-center">
@@ -126,8 +117,8 @@
           </span>
         </div>
       </div>
-        
-      
+
+
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Wetick</span>
         <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
@@ -157,22 +148,17 @@
           <li>Sitemap</li>
         </ul>
       </div>
-      
+
     </div>
     <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
       © 2020 Wetick All Rights Reserved
     </div>
     </div>
-      
-    
+
+
   </footer>
-
-
-
-
   <script>
     feather.replace()
   </script>
 </body>
-
 </html>
