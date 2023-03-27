@@ -23,54 +23,84 @@
     }
 
   </style>
+  
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <header class="relative flex flex-col">
-    <nav class="absolute z-20 flex justify-between items-center px-12 bg-[#F5F5F5] h-24 w-full">
+  <header class="flex flex-col h-[750px]">
+    <!-- <nav class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24 w-full"> -->
+    <nav class="flex md:flex-row flex-col md:h-24 px-8">
       <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
-        <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
-        <span class="text-[#38291B]">We</span>
-        <span class="text-[#FFBA7B]">tick</span>
+        <div>
+          <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+        </div>
+        <div>
+          <span class="text-[#38291B]">We</span>
+          <span class="text-[#FFBA7B]">tick</span>
+        </div>
       </div>
-      <div class="font-semibold text-sm leading-5">
-        <ul class="flex gap-12">
-          <li>Home</li>
-          <li>Create Event</li>
-          <li>Location</li>
+      <div class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 font-semibold text-sm leading-5 gap-8 md:gap-0">
+        <ul class="flex md:flex-row flex-col flex-1 gap-12">
+          <li class="flex justify-center items-center min-w-[100px]"><a href="home.html">Home</a></li>
+          <li class="flex justify-center items-center min-w-[100px]"><a href="create-event.html">Create Event</a></li>
+          <li class="flex justify-center items-center min-w-[100px]"><a href="event.html">Location</a></li>
         </ul>
-      </div>
-      <div class="flex items-center w-[200px] gap-1 font-semibold text-sm leading-5">
-        <button type="submit" id="login-btn">Log In</button>
-        <button type="submit" id="signup-btn">Sign Up</button>
+        <div class="flex md:flex-row flex-col items-center gap-3">
+          <div class="w-full">
+            <a class="text-gray-600 flex justify-center items-center font-semibold text-sm leading-5 md:min-w-[180px] w-full  h-12 rounded-xl"
+              href="sign-in.html">Login</a>
+          </div>
+          <div class="w-full">
+            <a class="text-gray-600 flex justify-center items-center text-white font-semibold text-sm leading-5 md:min-w-[180px] w-full bg-[#AA7C52] hover:bg-[#FFBA7B] h-12 rounded-xl"
+              href="sign-up.html">Sign Up</a>
+          </div>
+        </div>
       </div>
     </nav>
-    <div class="absolute z-30 flex mt-[260px] ml-[120px] mr-[52.7px]">
-      <div class="flex flex-col justify-start items-end gap-[50px]">
-        <p class="font-semibold text-6xl w-[554px] leading-[96px] tracking-[2px]">Find events you love with our</p>
-        <div>
-          <span
-            class="flex flex-1 justify-between border-0 rounded-[20px] bg-white w-[600px] h-[75px] py-[25px] px-[25px]">
-            <i data-feather="search"></i>
-            <input class="font-medium text-xs leading-4" type="text" placeholder="Search Event...">
-            <i data-feather="map-pin"></i>
-            <input class="font-medium text-xs leading-4" type="text" placeholder="Where?">
-            <button class="w-[45px] h-[45px] bg-[#FFBA7B] rounded-[10px]" type="submit">&rarr;</button>
-          </span>
+    <section class="flex md:flex-row flex-col flex-1 md:px-24 py-10 items-center bg-[#AA7C52] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')] ]">
+      <div class="flex-1 flex flex-col gap-5">
+        <p class="font-semibold text-xl text-[#000] text-center md:text-6xl max-w-[554px] leading-[96px] ">Find events you love with our</p>
+        <div class="block w-full">
+          <div class="flex rounded-[20px] bg-white h-[75px]">
+            <span class="flex flex-1 justify-between border-0  py-[25px] pl-[25px] pr-0">
+              <i data-feather="search"></i>
+              <input class="font-medium text-xs leading-4" type="text" placeholder="Search Event...">
+              <i data-feather="map-pin"></i>
+              <select class="outline-none px-3 appearance-none font-medium text-xs md:min-w-[200px] leading-4">
+                <option disabled="" selected="">Where?</option>
+                <option>Jakarta</option>
+                <option>Bandung</option>
+                <option>Bali</option>
+                <option>Aceh</option>
+                <option>Solo</option>
+                <option>Yogyakarta</option>
+                <option>Semarang</option>
+              </select>
+
+            </span>
+
+            <button
+              class="flex justify-center items-center mr-[25px] w-[45px] h-[45px] bg-[#FFBA7B] rounded-[10px] self-center "
+              type="submit">
+              <span class="text-[#38291B]">
+                <i data-feather="arrow-right"></i>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
       <div>
         <img class="people-bg" src="assets/picture.png" alt="picture-bg-right">
       </div>
-    </div>
-    <div class="bg-[#AA7C52] z-10 ">
+    </section>
+    <!-- <div class="bg-[#AA7C52] z-10 ">
       <img class="w-full z-0" src="assets/background-circle.svg" alt="background-circle">
-    </div>
+    </div> -->
   </header>
 
   <main class="flex flex-col gap-[175px]">
-    <div class="flex flex-col mx-[120px] mt-[175px] gap-[50px]">
+    <div class="flex flex-col mx-[30px] md:mx-[120px] mt-[175px] gap-[50px]">
       <div class="flex flex-col gap-[25px]">
         <div class="w-[150px] h-[30px] bg-[#FFBA7B] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-[#38291B] font-semibold text-xs leading-4">
@@ -89,37 +119,40 @@
               <i data-feather="arrow-left"></i>
             </span>
           </div>
-          <div class="flex inline-block gap-[51px] ">
-            <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
-              <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">13</span>
-              <span>Mon</span>
-            </div>
-            <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
-              <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">14</span>
-              <span>Tue</span>
-            </div>
-            <div
-              class="flex flex-col justify-center items-center w-[50px] h-[75px] border-2 border-[#FFBA7B] text-[#FFBA7B] rounded-[16px]">
-              <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">15</span>
-              <span>Wed</span>
-            </div>
-            <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
-              <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">16</span>
-              <span>Thu</span>
-            </div>
-            <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
-              <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">17</span>
-              <span>Fri</span>
+          <div class="md:max-w-full max-w-[150px] overflow-x-auto">
+            <div class="flex inline-block gap-[51px]">
+              <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
+                <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">13</span>
+                <span>Mon</span>
+              </div>
+              <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
+                <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">14</span>
+                <span>Tue</span>
+              </div>
+              <div
+                class="flex flex-col justify-center items-center w-[50px] h-[75px] border-2 border-[#FFBA7B] text-[#FFBA7B] rounded-[16px]">
+                <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">15</span>
+                <span>Wed</span>
+              </div>
+              <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
+                <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">16</span>
+                <span>Thu</span>
+              </div>
+              <div class="flex flex-col justify-center items-center w-[50px] h-[75px] text-[#E4C5AA]">
+                <span class="font-semibold text-sm leading-5 tracking-[0.00039375px]">17</span>
+                <span>Fri</span>
+              </div>
             </div>
           </div>
           <div class="w-[45px] h-full rounded-[10px] flex justify-center items-center">
-            <span class="bg-[#AA7C52] rounded-[10px] w-[45px] h-[45px] p-[10px] shadow-[0_2px_15px_rgba(26,60,68,0.08)]">
+            <span
+              class="bg-[#AA7C52] rounded-[10px] w-[45px] h-[45px] p-[10px] shadow-[0_2px_15px_rgba(26,60,68,0.08)]">
               <i data-feather="arrow-right"></i>
             </span>
           </div>
 
         </div>
-        <div class="w-[125px] h-[50px] bg-[#E4C5AA] rounded-[15px] flex justify-center items-center">
+        <div class="w-[125px] h-[50px] bg-[#E4C5AA] rounded-[15px] md:flex hidden justify-center items-center">
           <span class="flex inline-block gap-[17px] py-[16px]">
             <img src="assets/date-icon.png" alt="date-icon">
             <p class="py-[3px] font-medium text-xs leading-4 tracking-[1px] ">March</p>
@@ -197,74 +230,76 @@
         </div>
       </div>
     </div>
-    
+
     <div id="2nd-main" class="">
-      <div class="flex flex-col gap-[50px] bg-[#FFE8D3] px-[50px] py-[73px] m-[50px] rounded-[30px]">
+      <div class="flex flex-col gap-[50px] bg-[#FFE8D3] px-[50px] py-[73px] m-[50px] rounded-[30px] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')]">
         <div class="w-[150px] h-[30px] bg-[#FFBA7B] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-[#38291B] font-semibold text-xs leading-4">
             <img class="text-[#38291B]" src="assets/Line 4.svg" alt="line-4">
             LOCATION
           </span>
         </div>
-        <div class="grid grid-cols-4 gap-[70px]">
-          <div>
+        <!-- <div class="grid grid-cols-4 gap-[70px]"> -->
+        <div class="location-grid" >
+          <div class="grid-title">
             <p class="font-semibold text-4xl leading-[177.78%] tracking-[1px]">Discover Events Near You</p>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <!-- <div class="flex flex-col gap-[15px]"> -->
+          <div class="grid-1" >
             <div class="flex flex-col justify-center">
               <img src="assets/Jakarta.png" alt="Jakarta">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Jakarta</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-2">
             <div class="flex flex-col justify-center">
               <img src="assets/Bandung.png" alt="Bandung">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Bandung</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-3">
             <div class="flex flex-col justify-center">
               <img src="assets/Bali.png" alt="Bali">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Bali</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-4">
             <div class="flex flex-col justify-center">
               <img src="assets/Aceh.png" alt="Aceh">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Aceh</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-5">
             <div class="flex flex-col justify-center">
               <img src="assets/Solo.png" alt="Solo">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Solo</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-6">
             <div class="flex flex-col justify-center">
               <img src="assets/Yogyakarta.png" alt="Yogyakarta">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Yogyakarta</div>
           </div>
-          <div class="flex flex-col gap-[15px]">
+          <div class="grid-7">
             <div class="flex flex-col justify-center">
               <img src="assets/Semarang.png" alt="Semarang">
             </div>
             <div class="text-center font-medium text-base leading-6 tracking-[1px]">Semarang</div>
           </div>
-          
+
         </div>
         <div class="flex flex-col justify-center items-center">
           <button type="submit
-      "class="w-[255px] h-[40px] bg-[#AA7C52] rounded-2xl text-center text-[#FFBA7B]">
-        See All
-      </button>
+      " class="w-[255px] h-[40px] bg-[#AA7C52] rounded-2xl text-center text-[#FFBA7B]">
+            See All
+          </button>
         </div>
       </div>
     </div>
 
     <div id="3rd-main">
-      <div class="flex flex-col justify-center items-center gap-[25px]">
+      <div class="flex flex-col items-center mx-[30px] md:mx-[120px] gap-[25px]">
         <div class="w-[150px] h-[30px] bg-[#FFBA7B] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-[#38291B] font-semibold text-xs leading-4">
             <img class="text-[#38291B]" src="assets/Line 4.svg" alt="line-4">
@@ -272,63 +307,101 @@
           </span>
         </div>
         <div>
-          <p class="font-semibold text-4xl leading-[54px]">Browse Events By Category</p>
+          <p class="font-semibold text-4xl text-center leading-[54px]">Browse Events By Category</p>
         </div>
-        <div class="flex flex-row justify-center items-center gap-[100px] my-[25px]">
-          
-          <div class="font-medium text-base leading-6 text-center text-[#FFBA7B]">Music</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Arts</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Outdoors</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Workshop</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Sport</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Festival</div>
-          <div class="font-medium text-base leading-6 text-center text-[#C1C5D0]">Fashion</div>
+        <div class="flex md:flex-row flex-col items-center gap-3 md:gap-[100px] my-[25px]">
+          <div class="flex inline-block md:gap-[100px]">
+            <div
+              class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#FFBA7B] border-b-2 border-[#FFBA7B] ">
+              Music</div>
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">Arts
+            </div>
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
+              Outdoors</div>
+          </div>
+          <div class="flex inline-block md:gap-[100px]">
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
+              Workshop</div>
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">Sport
+            </div>
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
+              Festival</div>
+          </div>
+          <div class="flex inline-block md:gap-[100px]">
+            <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">Fashion
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="event-banner-wrap">
-            <div class="event-banner">
-              <img src="assets/Banner1.png" alt="banner-1">
-              <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
-                <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Wed, 15 Nov, 4:00 PM</div>
-                <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">Sights & Sounds Exhibition</div>
-                <div class="top-[-20px] absolute z-50">
-                  <div>
-                    <img src="assets/avatars.png" alt="Avatars">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="event-banner">
-              <img src="assets/Banner2.png" alt="banner-2">
-              <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
-                <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Thu, 16 Nov, 7:00 PM</div>
-                <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">See it in Gold Class</div>
-                <div class="top-[-20px] absolute z-50">
-                  <div>
-                    <img src="assets/avatars.png" alt="Avatars">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="event-banner">
-              <img src="assets/Banner1.png" alt="banner-1">
-              <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
-                <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Wed, 15 Nov, 4:00 PM</div>
-                <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">Sights & Sounds Exhibition</div>
-                <div class="top-[-20px] absolute z-50">
-                  <div>
-                    <img src="assets/avatars.png" alt="Avatars">
-                  </div>
+        <div class="event-banner-wrap">
+          <div class="event-banner">
+            <img src="assets/Banner1.png" alt="banner-1">
+            <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
+              <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Wed, 15 Nov, 4:00 PM</div>
+              <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">Sights & Sounds Exhibition</div>
+              <div class="top-[-20px] absolute z-50">
+                <div>
+                  <img src="assets/avatars.png" alt="Avatars">
                 </div>
               </div>
             </div>
           </div>
+          <div class="event-banner">
+            <img src="assets/Banner2.png" alt="banner-2">
+            <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
+              <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Thu, 16 Nov, 7:00 PM</div>
+              <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">See it in Gold Class</div>
+              <div class="top-[-20px] absolute z-50">
+                <div>
+                  <img src="assets/avatars.png" alt="Avatars">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-banner">
+            <img src="assets/Banner1.png" alt="banner-1">
+            <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
+              <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Wed, 15 Nov, 4:00 PM</div>
+              <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">Sights & Sounds Exhibition</div>
+              <div class="top-[-20px] absolute z-50">
+                <div>
+                  <img src="assets/avatars.png" alt="Avatars">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-banner">
+            <img src="assets/Banner2.png" alt="banner-2">
+            <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
+              <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Thu, 16 Nov, 7:00 PM</div>
+              <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">See it in Gold Class</div>
+              <div class="top-[-20px] absolute z-50">
+                <div>
+                  <img src="assets/avatars.png" alt="Avatars">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-banner">
+            <img src="assets/Banner1.png" alt="banner-1">
+            <div class="absolute bottom-0 text-white bg-[#AA7C52] p-5">
+              <div class="font-medium text-sm leading-7 tracking-[1px] text-white">Wed, 15 Nov, 4:00 PM</div>
+              <div class="font-semibold text-xl leading-7 tracking-[2px] text-white">Sights & Sounds Exhibition</div>
+              <div class="top-[-20px] absolute z-50">
+                <div>
+                  <img src="assets/avatars.png" alt="Avatars">
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- <div class="below-banner">
+          </div> -->
         </div>
       </div>
     </div>
     <div id="4th-main" class="mb-[175px]">
-      <div class="flex flex-col justify-center items-center relative bg-[#000] w-full h-[450px] gap-[25px]">
-        <img class="absolute rotate-180 w-full object-center" src="assets/background-circle.svg" alt="background-circle">
+      <div
+        class="flex flex-col justify-center py-10 items-center flex-1 bg-[#000] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')] gap-[25px]">
+        <!-- <img class="absolute rotate-180 w-full object-center" src="assets/background-circle.svg" alt="background-circle"> -->
         <div class="w-[150px] h-[30px] bg-[#C1C5D0] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-grey-900 font-semibold text-xs leading-4">
             <img class="text-white" src="assets/Line 4.svg" alt="line-4">
@@ -336,24 +409,43 @@
           </span>
         </div>
         <div>
-          <p class="font-semibold text-4xl leading-[54px] text-white">Our Trusted Partners</p>
+          <p class="font-semibold text-center text-4xl leading-[54px] text-white">Our Trusted Partners</p>
         </div>
-        <div class="text-[#C1C5D0] font-normal text-xs flex items-center text-center leading-[233.33%] tracking-[1px]">By companies like :</div>
-        <div class="flex flex-row justify-center items-center gap-[65px]"
-          <img src="assets/partner-1.svg" alt="partner-1">
-          <img src="assets/partner-2.svg" alt="partner-2">
-          <img src="assets/partner-3.svg" alt="partner-3">
-          <img src="assets/partner-4.svg" alt="partner-4">
-          <img src="assets/partner-5.svg" alt="partner-5">
-          <img src="assets/partner-6.svg" alt="partner-6">
+        <div class="text-[#C1C5D0] font-normal text-xs flex items-center text-center leading-[233.33%] tracking-[1px]">
+          By companies like :</div>
+        <div class="flex md:flex-row flex-col justify-center items-center gap-[50px] md:gap-[65px] mt-[30px]">
+          <div class="flex md:flex gap-[70px] md:gap-[65px]">
+            <div>
+              <img src="assets/partner-1.svg" alt="partner-1">
+            </div>
+            <div>
+              <img src="assets/partner-2.svg" alt="partner-2">
+            </div>
+          </div>
+          <div class="flex md:flex gap-[70px] md:gap-[65px]">
+            <div>
+              <img src="assets/partner-3.svg" alt="partner-3">
+            </div>
+            <div>
+              <img src="assets/partner-4.svg" alt="partner-4">
+            </div>
+          </div>
+          <div class="flex md:flex gap-[70px] md:gap-[65px]">
+            <div>
+              <img src="assets/partner-5.svg" alt="partner-5">
+            </div>
+            <div>
+              <img src="assets/partner-6.svg" alt="partner-6">
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="flex flex-col justify-items-center mx-[218px] h-[308px]">
+  <footer class="flex flex-col md:gap-0 gap-[50px] md:justify-items-center md:mx-[218px] md:h-[308px]">
 
-    <div class="flex-1 flex justify-items-center">
-      <div class="flex flex-col gap-[15px] mr-[100px]">
+    <div class="flex-1 flex flex-col md:flex-row justify-items-center md:mx-0 mx-[30px] gap-[50px] md:gap-[125px]">
+      <div class="flex flex-col gap-[15px]">
         <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
           <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
           <span class="text-[#38291B]">We</span>
@@ -379,7 +471,7 @@
 
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Wetick</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>About Us</li>
           <li>Features</li>
           <li>Blog</li>
@@ -389,7 +481,7 @@
       </div>
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Features</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>Booking</li>
           <li>Create Events</li>
           <li>Discover</li>
@@ -398,7 +490,7 @@
       </div>
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Company</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>Partnership</li>
           <li>Help</li>
           <li>Terms of Service</li>
@@ -408,7 +500,8 @@
       </div>
 
     </div>
-    <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
+    <div
+      class="md:w-[306] md:h-[24px] md:mt-[-100px] md:mb-[50px] m-[30px] font-medium text-base tracking-wide leading-4">
       © 2020 Wetick All Rights Reserved
     </div>
     </div>
