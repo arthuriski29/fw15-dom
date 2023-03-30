@@ -26,27 +26,35 @@
 </head>
 
 <body>
-  <div class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24">
+  <nav class="flex md:flex-row flex-col md:h-24 px-8 bg-[#DED6C6]">
     <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
-      <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
-      <span class="text-[#38291B]">We</span>
-      <span class="text-[#FFBA7B]">tick</span>
+      <div>
+        <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+      </div>
+      <div>
+        <span class="text-[#38291B]">We</span>
+        <span class="text-[#FFBA7B]">tick</span>
+      </div>
     </div>
-    <div class="font-semibold text-sm leading-5">
-      <ul class="flex gap-12">
-        <li>Home</li>
-        <li>Create Event</li>
-        <li>Location</li>
+    <div class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 font-semibold text-sm leading-5 gap-8 md:gap-0">
+      <ul class="flex md:flex-row flex-col flex-1 gap-12">
+        <li class="flex justify-center items-center min-w-[100px]"><a href="home.html">Home</a></li>
+        <li class="flex justify-center items-center min-w-[100px]"><a href="create-event.html">Create Event</a></li>
+        <li class="flex justify-center items-center min-w-[100px]"><a href="event.html">Location</a></li>
       </ul>
     </div>
     <div class="flex items-center gap-5 font-semibold text-sm leading-5">
-      <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
-        <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
-          alt="profile">
+      <a href="edit-profile.html">
+        <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#9E91AE] to-[#450206]">
+          <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
+            alt="profile">
+        </div>
+      </a>
+      <div class="font-semibold text-sm leading-5">
+        <a href="edit-profile.html">Jhon Tomson</a>
       </div>
-      <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
     </div>
-  </div>
+  </nav>
   <main class="flex">
     <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
       <div class="flex gap-[15px]">
@@ -102,7 +110,7 @@
                 <li>Jakarta, Indonesia</li>
                 <li>Wed, 15 Nov, 4:00 PM</li>
                 <li class="flex gap-3.5">
-                  <a href="#" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
+                  <a href="event.html" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Update</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Delete</a>
                 </li>
@@ -122,7 +130,7 @@
                 <li>Jakarta, Indonesia</li>
                 <li>Wed, 15 Nov, 4:00 PM</li>
                 <li class="flex gap-3.5">
-                  <a href="#" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
+                  <a href="event.html" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Update</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Delete</a>
                 </li>
@@ -142,7 +150,7 @@
                 <li>Jakarta, Indonesia</li>
                 <li>Wed, 15 Nov, 4:00 PM</li>
                 <li class="flex gap-3.5">
-                  <a href="#" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
+                  <a href="event.html" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Update</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Delete</a>
                 </li>
@@ -162,7 +170,7 @@
                 <li>Jakarta, Indonesia</li>
                 <li>Wed, 15 Nov, 4:00 PM</li>
                 <li class="flex gap-3.5">
-                  <a href="#" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
+                  <a href="event.html" class="text-[#AA7C52] underline underline-offset-2">Detail</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Update</a>
                   <a href="#" class="text-[#AA7C52] underline underline-offset-2">Delete</a>
                 </li>

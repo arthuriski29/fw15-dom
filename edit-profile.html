@@ -26,33 +26,41 @@
 </head>
 
 <body>
-  <div class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24">
+  <nav class="flex md:flex-row flex-col md:h-24 px-8 bg-[#DED6C6]">
     <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
-      <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
-      <span class="text-[#38291B]">We</span>
-      <span class="text-[#FFBA7B]">tick</span>
+      <div>
+        <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+      </div>
+      <div>
+        <span class="text-[#38291B]">We</span>
+        <span class="text-[#FFBA7B]">tick</span>
+      </div>
     </div>
-    <div class="font-semibold text-sm leading-5">
-      <ul class="flex gap-12">
-        <li>Home</li>
-        <li>Create Event</li>
-        <li>Location</li>
+    <div class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 font-semibold text-sm leading-5 gap-8 md:gap-0">
+      <ul class="flex md:flex-row flex-col flex-1 gap-12">
+        <li class="flex justify-center items-center min-w-[100px]"><a href="home.html">Home</a></li>
+        <li class="flex justify-center items-center min-w-[100px]"><a href="create-event.html">Create Event</a></li>
+        <li class="flex justify-center items-center min-w-[100px]"><a href="event.html">Location</a></li>
       </ul>
     </div>
     <div class="flex items-center gap-5 font-semibold text-sm leading-5">
-      <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
-        <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
-          alt="profile">
+      <a href="edit-profile.html">
+        <div class="p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#9E91AE] to-[#450206]">
+          <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full" src="assets/profile-picture-1.jpg"
+            alt="profile">
+        </div>
+      </a>
+      <div class="font-semibold text-sm leading-5">
+        <a href="edit-profile.html">Jhon Tomson</a>
       </div>
-      <div class="font-semibold text-sm leading-5">Jhon Tomson</div>
     </div>
-  </div>
+  </nav>
   <main class="flex">
     <aside class="ml-[70px] mt-[50px] font-semibold text-sm leading-5">
       <div class="flex gap-[15px]">
         <div>
           <div
-            class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
+            class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#9E91AE] to-[#450206]">
             <img class="border-[3.38px] border-white object-cover w-11 h-11 rounded-full"
               src="assets/profile-picture-1.jpg" alt="profile">
           </div>
@@ -79,38 +87,46 @@
       </ul>
     </aside>
     <div id="profile-tab" class="flex w-[926px] h-[825px] my-12 mx-[70px]">
-      <div id="profile-tab-wrap" class="px-[50px] pt-[46px] rounded-[30px] bg-[#FFE8D3]">
+      <div id="profile-tab-wrap" class="px-[50px] pt-[46px] rounded-[30px] bg-[#DED6C6]">
         <div class="mb-[50px] font-semibold text-xl leading-6">Profile</div>
-        <div class="flex font-normal text-sm leading-5">
+        <div class="flex gap-[50px] font-normal text-sm leading-5">
           <div id="profile-list" class="flex flex-col w-[468px]">
             <form class="w-full flex flex-col gap-[50px]">
               <div id="name" class="flex gap-8">
-                <label for="name" class="w-[130px]">Name</label>
-                <input type="text" id="name-input" placeholder="Jhon Tomson">
+                <label for="name" class="w-[130px] py-[5px]">Name</label>
+                <div class="w-[213px] h-[30px] rounded-[12.5px] pl-[10px] bg-[#fff] py-[3px]">
+                  <input type="text" id="name-input" placeholder="Jhon Tomson">
+                </div>
               </div>
               <div id="username" class="flex gap-8">
-                <label for="username" class="w-[130px]">Username</label>
-                <input type="text" id="username-input" placeholder="@jhont0">
+                <label for="username" class="w-[130px] py-[5px]">Username</label>
+                <div class="h-[30px] pl-[10px]  py-[3px]">
+                  <input class="bg-[#DED6C6]" type="text" id="username-input" placeholder="@jhont0">
+                </div>
                 <a href="#">Edit</a>
               </div>
               <div id="email" class="flex gap-8">
-                <label for="email" class="w-[130px]">Email</label>
-                <input type="email" id="email-input" placeholder="jhont0@mail.com">
+                <label for="email" class="w-[130px] py-[2px]">Email</label>
+                <div class="h-[30px] pl-[10px]  py-[3px]">
+                  <input class="bg-[#DED6C6]" type="email" id="email-input" placeholder="jhont0@mail.com">
+                </div>
                 <a href="#">Edit</a>
               </div>
               <div id="phone-number" class="flex gap-8">
-                <label for="phone-number" class="w-[130px]">Phone Number</label>
-                <input type="tel" id="phone-input">
+                <label for="phone-number" class="w-[130px] py-[2px]">Phone Number</label>
+                <div class="h-[30px] pl-[10px]  py-[3px]">
+                  <input class="bg-[#DED6C6]" type="tel" id="phone-input" placeholder="081234567890">
+                </div>
                 <a href="#">Edit</a>
               </div>
               <div id="gender" class="flex gap-8">
-                <label for="gender" class="w-[130px]">Gender</label>
+                <label for="gender" class="w-[130px] py-[2px]">Gender</label>
                 <input type="radio" id="gender-male" value="Male"><label for="gender-1">Male</label>
                 <input type="radio" id="gender-female" value="Female"><label for="gender-2">Female</label>
               </div>
               <div id="profession" class="flex gap-8">
-                <label for="profession" class="w-[130px]">Profession</label>
-                <select id="profession-select">
+                <label for="profession" class="w-[130px] py-[2px]">Profession</label>
+                <select class="w-[213px]" id="profession-select">
                   <option value="" disabled selected>Entrepreneur</option>
                   <option value="1">Artist</option>
                   <option value="2">Business Analyst</option>
@@ -122,7 +138,7 @@
                 </select>
               </div>
               <div id="nationality" class="flex gap-8">
-                <label for="nationality" class="w-[130px]">Nationality</label>
+                <label for="nationality" class="w-[130px] py-[2px]">Nationality</label>
                 <select id="nationality-select">
                   <option value="" disabled selected>Indonesia</option>
                   <option value="afghan">Afghan</option>
@@ -320,31 +336,33 @@
                 </select>
               </div>
               <div id="birthday-date" class="flex gap-8">
-                <label for="birthday" class="w-[130px]">Birthday Date</label>
-                <input type="date" id="birthday-select">
+                <label for="birthday" class="w-[130px] py-[2px]">Birthday Date</label>
+                <input class="bg-[#DED6C6]" type="date" id="birthday-select" value="2023-06-03">
                 <a href="#">Edit</a>
               </div>
             </form>
             <button id="profile-save-button" type="submit" class="my-[50px] mt-[50px] border-none rounded-2xl px-[20px] shadow-[0px_8px_10px_#38291B] bg-yellow-700 text-orange-300 font-bold no-underline w-full h-10">Save</button>
           </div>
-          <div id="profile-user-picture" class="flex flex-col border-l-2 pl-[50px]">
-            <div>
-              <div class="flex items-center justify-center">
-                <div
-                  class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#3366FF] to-[#884DFF]">
-                  <img class="border-[3.38px] border-white object-cover w-[110px] h-[110px] rounded-full"
-                    src="assets/profile-picture-1.jpg" alt="profile">
+          <div id="profile-user-picture">
+            <div class="flex flex-col border-l-2 pl-[25px]">
+              <div>
+                <div class="flex items-center justify-center">
+                  <div
+                    class="inline-block p-[2px] border-transparent rounded-full p-[2px] bg-gradient-to-r from-[#9E91AE] to-[#450206]">
+                    <img class="border-[3.38px] border-white object-cover w-[110px] h-[110px] rounded-full"
+                      src="assets/profile-picture-1.jpg" alt="profile">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <button id="profile-choose-photo-button" type="submit" class="mt-[50px] border-none rounded-2xl px-[20px] shadow-[0px_8px_10px_#38291B] bg-yellow-700 text-orange-300 font-bold no-underline w-full h-10">Choose Photo</button>
-            </div>
-            <div class="mt-[50px]">
-              <ul>
-                <li>Image size: max, 2 MB</li>
-                <li>Image formats: .JPG, .JPEG, .PNG</li>
-              </ul>
+              <div>
+                <button id="profile-choose-photo-button" type="submit" class="mt-[50px] border-none rounded-2xl px-[20px] shadow-[0px_8px_10px_#38291B] bg-yellow-700 text-orange-300 font-bold no-underline w-full h-10">Choose Photo</button>
+              </div>
+              <div class="mt-[50px]">
+                <ul>
+                  <li>Image size: max, 2 MB</li>
+                  <li>Image formats: .JPG, .JPEG, .PNG</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -352,10 +370,10 @@
     </div>
 
   </main>
-  <footer class="flex flex-col justify-items-center mx-[218px] h-[308px]">
+  <footer class="flex flex-col md:gap-0 gap-[50px] md:justify-items-center md:mx-[218px] md:h-[308px]">
 
-    <div class="flex-1 flex justify-items-center">
-      <div class="flex flex-col gap-[15px] mr-[100px]">
+    <div class="flex-1 flex flex-col md:flex-row justify-items-center md:mx-0 mx-[30px] gap-[50px] md:gap-[125px]">
+      <div class="flex flex-col gap-[15px]">
         <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
           <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
           <span class="text-[#38291B]">We</span>
@@ -381,7 +399,7 @@
 
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Wetick</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>About Us</li>
           <li>Features</li>
           <li>Blog</li>
@@ -391,7 +409,7 @@
       </div>
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Features</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>Booking</li>
           <li>Create Events</li>
           <li>Discover</li>
@@ -400,7 +418,7 @@
       </div>
       <div class="flex flex-1 flex-col gap-[20px]">
         <span class="font-semibold text-base tracking-wide">Company</span>
-        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#666971]">
+        <ul class="flex flex-col gap-[15px] font-medium text-sm leading-5 tracking-wide text-[#C1C5D0]">
           <li>Partnership</li>
           <li>Help</li>
           <li>Terms of Service</li>
@@ -410,7 +428,8 @@
       </div>
 
     </div>
-    <div class="w-[306] h-[24px] mt-[-100px] mb-[50px] font-medium text-base tracking-wide leading-4">
+    <div
+      class="md:w-[306] md:h-[24px] md:mt-[-100px] md:mb-[50px] m-[30px] font-medium text-base tracking-wide leading-4">
       © 2020 Wetick All Rights Reserved
     </div>
     </div>
