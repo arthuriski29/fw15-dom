@@ -71,23 +71,7 @@ body {
 .logo-name > .second {
   color: #FFBA7B;
 }
-#input-signup-page-1, #input-signup-page-2 , .password-container > #password1, .password-container > #password2 {
-  height: 55px;
-  width: 100% ;
-  margin-bottom: 20px;
-  color:#38291B;
-  border: 1px solid #aaa;
-  border-radius: 27.5px;
-  
 
-  
-  
-  padding-left: 25px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  box-sizing: border-box;
-  outline: none;
-}
 
 .first-line {
   font-size: 24px;
@@ -141,12 +125,81 @@ body {
   margin-top: 20px;
   text-align: center;
 }
-.password-container {
+
+/* FORM LOGIN */
+
+
+
+.input-control input {
+  height: 55px;
+  width: 100% ;
+  margin-top: 12px;
+  color:#38291B;
+  border: 1px solid #aaa;
+  border-radius: 27.5px;
+
+  display: block;
+  
+  padding-left: 25px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+  /* outline: none; */
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+/* change inputplaceholder */
+.input-control input::placeholder {
+  font-family: 'Poppins' sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+#password-container {
   display: block;
   position: relative;
   width: 100%;
  }
-   
+
+ /* for JS error */
+ .input-control.success input {
+  border-color: #38291B;
+ }
+
+ .input-control.error input {
+  border-color: #FFBA7B;
+ }
+
+ .input-control .error {
+  color: #FFBA7B;
+  font-size: 10px;
+  height: 13px;
+  text-align: end;
+  
+ }
+
+ .input-checkbox {
+  display: flex;
+  flex-direction: column;
+ }
+
+ #form-login-alert {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFBA7B;
+  padding: 2px;
+ }
+
+
+/* end of FORM LOGIN */
+
+
+/* unused */
  .toggle-password-button {
   cursor: pointer;
  }
@@ -162,6 +215,9 @@ body {
  .show {
   display: block;
  }
+
+/* unused */
+
 label.signup-label{
    gap: 10px;
 }
@@ -191,13 +247,6 @@ button:hover {
   cursor: pointer;
 }
 
-input::placeholder {
-  font-family: 'Poppins' sans-serif;
-  letter-spacing: 1px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
 .method-word {
   font-weight: 400;
   font-size: 14px;
@@ -219,9 +268,9 @@ input::placeholder {
   border-radius: 6px;
   padding: 14px 35px;
 }
-body {
+/* body {
   font-family: 'Poppins' sans-serif;
-}
+} */
 button#login-btn {
   background-color: #F5F5F5;
   color: #38291B;
