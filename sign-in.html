@@ -48,21 +48,24 @@
           </span>
            
         </div>
-        <form>
-          <div>
-            <input type="text" placeholder="Username" /> 
+        <form id="form-login">
+          <div class="input-control">
+            <input id="username" type="text" placeholder="Username" /> 
             <!-- First Name -->
+            <div class="error"></div>
           </div>
-          <div>
-            <input type="email" placeholder="Email" />
+          <div class="input-control">
+            <input id="email" type="email" placeholder="Email" />
             <!-- Email -->
+            <div class="error"></div>
           </div>
-          <div class="password-container">
-            <input type="password" id="password" placeholder="Password">
-            <a class="toggle-password-button" id="toggle-password-button">
+          <div class="input-control" id="password-container">
+            <input name="password1" type="password" id="password1" placeholder="Password">
+            <!-- <a class="toggle-password-button" id="toggle-password-button">
               <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633655.png" id="closed-eye">
               <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633633.png" id="open-eye" class="hide">
-            </a>
+            </a> -->
+            <div class="error" id="pass1Err"></div>
           </div>
           <!-- <div class="password-container">
             <input type="password" id="password" placeholder="Confirm Password">
@@ -71,17 +74,17 @@
               <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633633.png" id="open-eye" class="hide">
             </a>
           </div> -->
+          <div class="signin-label">
+            <span><a href="forgot-password.html">Forgot Password?</a></span>
+            <!-- <input type="checkbox" /> -->
+          </div>
+          <div id="form-login-alert"></div>
+          <div class="signin-btn">
+            <button type="submit">Sign In</button>
+            <!-- signup -->
+          </div>
         </form>
 
-        <div class="signin-label">
-          <span><a href="forgot-password.html">Forgot Password?</a></span>
-          <!-- <input type="checkbox" /> -->
-        </div>
-
-        <div class="signin-btn">
-          <button type="submit">Sign In</button>
-          <!-- signup -->
-        </div>
         <div class="method-word">
           <span>
             or sign in with
@@ -94,7 +97,7 @@
 
       </div>
     </div>
-    <script type="text/js" src="/cobainjss.js"></script>
+    <script src="/js/sign-in.js"></script>
 </body>
 
 </html>

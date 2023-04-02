@@ -12,7 +12,7 @@ body {
 .section1 {
   display:flex;
   flex: 1;
-  
+  flex-wrap: wrap;
   background-color: #AA7C52;  
   justify-content: center;
   align-items: center;
@@ -38,6 +38,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex:1;
 }
 .section2-blank {
   width:315px;
@@ -539,15 +540,46 @@ button#signup-btn {
   
 }
 
+
+@media screen and (min-width: 320px ) {
+  
+}
+
 /* Edit-Profile */
 
 @media screen and (max-width: 769px) {
     
+  .wrapper {
+    flex-direction: row;
+  }
+
   .section1 {
-    display: none;
+    flex: 1;
+    height: auto;
+  }
+
+  .section2 {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .section2-blank {
+    padding: 50px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .input-control {
+    display: flex;
+    flex-direction: column;
   }
 
 
+  .section1 {
+    display:none;
+  }
 
   .location-grid {
     display: grid;

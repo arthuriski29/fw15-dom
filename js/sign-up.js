@@ -3,9 +3,9 @@ const nameAlert = nameInput.nextElementSibling;
 const emailInput = document.getElementById('email');
 const emailAlert = emailInput.nextElementSibling;
 const password1 = document.getElementById('password1');
-const passAlert1 = password1.nextElementSibling;
+const passAlert1 = document.getElementById('pass1Err');
 const password2 = document.getElementById('password2');
-const passAlert2 = password2.nextElementSibling;
+const passAlert2 = document.getElementById('pass2Err');
 
 
 // console.log(emailInput);
