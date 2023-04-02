@@ -180,8 +180,8 @@ formInput.addEventListener('submit', function(event) {
 const notSubmit = document.getElementById('form-login-alert')
 
 const validateInputs = () => {
-  //1.Name
-if(namePass !== true ||
+
+  if(namePass !== true ||
   emailPass !== true ||
   passChecked !== true ||
   boxValue !== true ) {
@@ -190,17 +190,6 @@ if(namePass !== true ||
   } else {
   window.location.href = 'home.html'
   }
-
-
-  // 2.Email
-  // 3. Password
-  // 4. Cb
-
-
-
-
-
-
 }
 
 
