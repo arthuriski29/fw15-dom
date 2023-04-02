@@ -12,16 +12,14 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
   <style type="text/tailwindcss">
     @layer utilities {
       .content-auto {
         content-visibility: auto;
       }
-    
     }
-
   </style>
   
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -29,35 +27,43 @@
 
 <body>
   <header class="flex flex-col h-[750px]">
-    <!-- <nav class="flex justify-between items-center px-12 bg-[#F5F5F5] h-24 w-full"> -->
-    <nav class="flex md:flex-row flex-col md:h-24 px-8">
-      <div class="flex items-center text-2xl font-bold gap-px tracking-wider">
-        <div>
-          <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+    <div class="flex md:flex-row flex-col justify-center md:justify-between items-center min-h-[3.5rem] px-8">
+      <div class="text-left text-2xl font-bold tracking-wide w-full md:w-[unset] flex justify-between items-center">
+        <div class="flex">
+          <div>
+            <img class="w-12 h-12" src="assets/wetick-logo.png" alt="wetick-logo">
+          </div>
+          <div class="flex items-center">
+            <span class="text-[#38291B]">We</span>
+            <span class="text-[#FFBA7B]">tick</span>
+          </div>
         </div>
-        <div>
-          <span class="text-[#38291B]">We</span>
-          <span class="text-[#FFBA7B]">tick</span>
+        <div class="md:hidden">
+          <button id="menu-toggler" class="border-2 border-black px-4 py-2 rounded-xl">
+            <i data-feather="align-justify"></i>
+          </button>
         </div>
       </div>
-      <div class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 font-semibold text-sm leading-5 gap-8 md:gap-0">
-        <ul class="flex md:flex-row flex-col flex-1 gap-12">
+      <div id="menu" class="hidden md:flex md:flex-row  flex-col flex-1 w-full md:w-[unset] items-center justify-between font-semibold text-sm leading-5">
+        <ul class="flex md:flex-row flex-col text-center gap-5 w-full justify-center">
           <li class="flex justify-center items-center min-w-[100px]"><a href="home.html">Home</a></li>
           <li class="flex justify-center items-center min-w-[100px]"><a href="create-event.html">Create Event</a></li>
           <li class="flex justify-center items-center min-w-[100px]"><a href="event.html">Location</a></li>
         </ul>
-        <div class="flex md:flex-row flex-col items-center gap-3">
+        <div class="flex md:flex-row flex-col gap-3 w-full md:w-[unset]">
           <div class="w-full">
-            <a class="text-gray-600 flex justify-center items-center font-semibold text-sm leading-5 md:min-w-[180px] w-full  h-12 rounded-xl"
+            <a class="text-gray-600 w-full min-w-[120px] inline-block text-center py-2 text-black font-bold rounded"
               href="sign-in.html">Login</a>
-          </div>
-          <div class="w-full">
-            <a class="text-gray-600 flex justify-center items-center text-white font-semibold text-sm leading-5 md:min-w-[180px] w-full bg-[#AA7C52] hover:bg-[#FFBA7B] h-12 rounded-xl"
+            </div>
+            <div class="w-full">
+              <a class="bg-[#AA7C52] w-full min-w-[120px] inline-block text-center py-2 text-white font-bold rounded"
               href="sign-up.html">Sign Up</a>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+    
     <section class="flex md:flex-row flex-col flex-1 md:px-24 py-10 items-center bg-[#AA7C52] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')] ]">
       <div class="flex-1 flex flex-col gap-5">
         <p class="font-semibold text-xl text-[#000] text-center md:text-6xl max-w-[554px] leading-[96px] ">Find events you love with our</p>
@@ -243,7 +249,7 @@
     </div>
 
     <div id="3rd-main">
-      <div class="flex flex-col items-center mx-[30px] md:mx-[120px] gap-[25px]">
+      <div class="flex flex-col mx-[30px] md:mx-[120px] gap-[25px]">
         <div class="w-[150px] h-[30px] bg-[#FFBA7B] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-[#38291B] font-semibold text-xs leading-4">
             <img class="text-[#38291B]" src="assets/Line 4.svg" alt="line-4">
@@ -253,8 +259,8 @@
         <div>
           <p class="font-semibold text-4xl text-center leading-[54px]">Browse Events By Category</p>
         </div>
-        <div class="flex md:flex-row flex-col items-center gap-3 md:gap-[100px] my-[25px] ">
-          <div class="flex inline-block md:gap-[50px]">
+        <div class="flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-[20px] md:w-full my-[25px] ">
+          <div class="flex md:justify-between">
             <div
               class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#FFBA7B] border-b-2 border-[#FFBA7B] ">
               Music</div>
@@ -263,7 +269,7 @@
             <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
               Outdoors</div>
           </div>
-          <div class="flex inline-block md:gap-[100px]">
+          <div class="flex md:justify-between">
             <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
               Workshop</div>
             <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">Sport
@@ -271,7 +277,7 @@
             <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">
               Festival</div>
           </div>
-          <div class="flex inline-block md:gap-[100px]">
+          <div class="flex md:justify-between">
             <div class="font-medium text-base leading-6 justify-center text-center min-w-[100px] text-[#C1C5D0]">Fashion
             </div>
           </div>
@@ -344,7 +350,7 @@
     </div>
     <div id="4th-main" class="mb-[175px]">
       <div
-        class="flex flex-col justify-center py-10 items-center flex-1 bg-[#000] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')] gap-[25px]">
+        class="flex flex-col justify-center py-10 items-center flex-1 bg-[#000] bg-cover bg-no-repeat bg-[url('assets/background-circle.svg')] gap-[25px] md:h-[700px]">
         <!-- <img class="absolute rotate-180 w-full object-center" src="assets/background-circle.svg" alt="background-circle"> -->
         <div class="w-[150px] h-[30px] bg-[#C1C5D0] border-0 rounded-[30px] px-[30px] py-[8px]">
           <span class="flex text-grey-900 font-semibold text-xs leading-4">

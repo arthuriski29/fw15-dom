@@ -379,8 +379,9 @@ if (
 
   //Ganti isi event-banner-wrap, dengan input dari javascript
 
-  const ParentEB = document.querySelector(".event-banner-wrap");
-
+  const ParentEB1 = document.getElementsByClassName("event-banner-wrap")[0];
+  const ParentEB2 = document.getElementsByClassName("event-banner-wrap")[1];
+  // const ParentEB = [ParentEB1, ParentEB2];
   function callBanner(times, ParentEB, arrayBanner) {
     for (let j = 0; j < times; j++) {
       for (let i = 0; i < arrayBanner.length; i++) {
@@ -423,6 +424,26 @@ if (
       }
     }
   }
+  // function to code
+  callBanner(5, ParentEB1, arrayBanner);
+  callBanner(3, ParentEB2, arrayBanner); //event banner bawah
 
-   callBanner(5, ParentEB, arrayBanner);
+  // coba grid
+  // const parentGrid = document.querySelector('.location-grid');
+  // const grid = parentGrid.querySelectorAll;
+
+  // console.log(typeof grid);
+
+  //NAVBAR
+  const menu = document.getElementById("menu");
+  const menuToggler = document.getElementById("menu-toggler");
+
+  menuToggler.addEventListener("click", function () {
+    const token = menu.classList;
+    if (token.contains("hidden")) {
+      token.remove("hidden");
+    } else {
+      token.add("hidden");
+    }
+  });
 }
