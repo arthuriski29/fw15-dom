@@ -14,6 +14,17 @@ if (
   // console.log(emailInput);
   // console.log(emailAlert);
 
+  // const eye1 = document.getElementById("toggle-password-button");
+  // eye1.addEventListener("click", function() {
+  //   if (password1.hasAttribute("type", "password")) {
+  //     password1.removeAttribute("type");
+  //     password1.setAttribute("type", "text");
+  //   } else {
+  //     password1.removeAttribute("type");
+  //     password1.setAttribute("type", "password")
+  //   }
+  // })
+
   //CHECKED FOR SUBMIT
   let namePass = false;
   let emailPass = false;
@@ -71,7 +82,7 @@ if (
         hasDigit = true;
       }
     }
-    // console.log(passwordValue)
+    console.log(passwordValue)
 
     if (passwordValue.trim() === "") {
       password1.setAttribute("style", "border-color: #FFBA7B;");
@@ -160,7 +171,7 @@ if (
       passChecked !== true ||
       boxValue !== true
     ) {
-      notSubmit.innerText = "Enter correct input to the field";
+      notSubmit.innerText = "Enter correct inputa and check the checkbox";
     } else {
       window.location.href = "home.html";
     }
@@ -357,20 +368,49 @@ if (
   //HOME PAGE
 
   const arrayBanner = [
+    {//revisi tambah object
+      image: "assets/images/Banner3.jpg",
+      schedule: "Fri, 17 Nov, 10:00 PM",
+      title: "Jimi Hendrix Experience",
+      viewer: "assets/images/avatars.png",
+      link: "event.html",
+    },
     {
-      image: "assets/Banner1.png",
+      image: "assets/images/Banner6.jpg",
+      schedule: "Thu, 20 Nov, 7:00 PM",
+      title: "Afternoon S(T)ea Party",
+      viewer: "assets/images/avatars.png",
+      link: "event.html",
+    },
+    {
+      image: "assets/images/Banner4.jpg",
+      schedule: "Mon, 18 Nov, 7:00 AM",
+      title: "Set Green for Next Gen",
+      viewer: "assets/images/avatars.png",
+      link: "event.html",
+    },
+    {
+      image: "assets/images/Banner5.jpg",
+      schedule: "Sat, 19 Nov, 4:00 PM",
+      title: "Aquascaping Exceptional",
+      viewer: "assets/images/avatars.png",
+      link: "event.html",
+    },
+    {
+      image: "assets/images/Banner1.png",
       schedule: "Wed, 15 Nov, 4:00 PM",
       title: "Sights & Sound Exhibition",
-      viewer: "assets/avatars.png",
+      viewer: "assets/images/avatars.png",
       link: "event.html",
     },
     {
-      image: "assets/Banner2.png",
+      image: "assets/images/Banner2.png",
       schedule: "Thu, 16 Nov, 7:00 PM",
       title: "See it in Gold Class",
-      viewer: "assets/avatars.png",
+      viewer: "assets/images/avatars.png",
       link: "event.html",
     },
+    
   ];
 
   //PARENT EVENT BANNER WRAP
@@ -425,8 +465,8 @@ if (
     }
   }
   // function to code
-  callBanner(5, ParentEB1, arrayBanner);
-  callBanner(3, ParentEB2, arrayBanner); //event banner bawah
+  callBanner(1, ParentEB1, arrayBanner);
+  callBanner(1, ParentEB2, arrayBanner); //event banner bawah
 
   // coba grid
   // const parentGrid = document.querySelector('.location-grid');

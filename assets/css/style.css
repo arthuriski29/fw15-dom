@@ -7,7 +7,7 @@ body {
   
   background-color: paleturquoise;
   display: flex;
-  min-height: 100vh;
+  
 }
 .section1 {
   display:flex;
@@ -91,6 +91,7 @@ body {
   color:#38291B;
 
 }
+
 .signin-label {
   display: flex;
   justify-content: end;
@@ -165,6 +166,11 @@ body {
   position: relative;
   width: 100%;
  }
+#password-container2 {
+  display: block;
+  position: relative;
+  width: 100%;
+ }
 
  /* for JS error */
  .input-control.success input {
@@ -201,15 +207,19 @@ body {
 
 
 /* unused */
- .toggle-password-button {
-  cursor: pointer;
- }
- .toggle-password-button img {
+  .toggle-password-button {
   position: absolute;
   right: 25px;
-  top: 14px;
+  top: 12px;
   width: 25px;
+  cursor: pointer;
  }
+
+ .toggle-password-button button {
+  border: none;
+  background-color: #ffff;
+ }
+
  .hide {
   display: none;
  }
@@ -224,9 +234,10 @@ label.signup-label{
 }
 label.signup-label:hover {
   cursor:pointer;
+  color:#FFBA7B;
 }
 
-button {
+.signup-btn button {
   background-color: #AA7C52;
   color: #ffba7b;
   font-family: 'Poppins', sans-serif;
@@ -241,7 +252,7 @@ button {
 
   box-shadow: 0px 8px 10px #38291B;
 }
-button:hover {
+.signup-btn button:hover {
   background-color: #FFBA7B;
   color: #38291B;
   transition: 0.5s;
@@ -560,7 +571,7 @@ button#signup-btn {
 
   .section2 {
     flex: 1;
-    max-width: 50%;
+    height: 100%;
   }
 
   .section2-blank {
@@ -578,7 +589,12 @@ button#signup-btn {
 
 
   .section1 {
-    display:none;
+    min-width: 0;
+    
+  }
+  .section2 {
+    min-width: 100%;
+    
   }
 
   .location-grid {

@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap"
     rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
   <title>Event Organizing</title>
   
   <style>
@@ -25,7 +26,7 @@
   <div class="wrapper">
     <div class="section1">
       <div class="bg-images">
-        <img src="assets/picture.png" alt="picture-bg-left" />
+        <img src="assets/images/picture.png" alt="picture-bg-left" />
 
       </div>
 
@@ -35,7 +36,7 @@
       <div class="section2-blank">
         <a href="home.html">
           <div class="logo">
-            <img src="assets/wetick-logo.png">
+            <img src="assets/images/wetick-logo.png">
   
             <div class="logo-name">
               <span class="first">We</span>
@@ -78,16 +79,26 @@
                 class="hide">
               </a> -->
               <!-- alert-pass1 -->
+              <div class="toggle-password-button">
+                <button type="button">
+                  <i data-feather="eye"></i>
+                </button>
+              </div>
               <div class="error" id="pass1Err"></div>
             </div>
-            <div class="input-control">
+            <div class="input-control"id="password-container2">
               <input name="password2" type="password" id="password2" placeholder="Confirm Password">
               <!-- <a class="toggle-password-button" id="toggle-password-button-2">
                 <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633655.png" id="closed-eye-2">
                 <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/633/633633.png" id="open-eye-2"
-                  class="hide">
+                class="hide">
               </a> -->
               <!-- alert-pass2 -->
+              <div class="toggle-password-button">
+                <button type="button">
+                  <i data-feather="eye"></i>
+                </button>
+              </div>
               <div class="error" id="pass2Err"></div>
             </div>
             
@@ -110,7 +121,10 @@
 
       </div>
     </div>
-    <script src="/js/allscript.js"></script>
+  <script>
+      feather.replace()
+  </script>
+  <script src="/assets/js/index.js"></script>
 </body>
 
 </html>
